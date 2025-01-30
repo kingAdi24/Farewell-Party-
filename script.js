@@ -1,5 +1,13 @@
-// Countdown Timer for the Farewell Event
-function countdown() {
+// Function to Reveal Countdown
+function revealCountdown() {
+    document.getElementById("gift-box").style.display = "none";
+    document.getElementById("countdown-container").style.display = "block";
+    startCountdown();
+    playFireworks();
+}
+
+// Function to Start Countdown
+function startCountdown() {
     const eventDate = new Date("February 8, 2025 09:00:00").getTime();
     const timer = setInterval(function () {
         const now = new Date().getTime();
@@ -20,7 +28,37 @@ function countdown() {
     }, 1000);
 }
 
-countdown();
+// Function to Reveal Invitation Details
+function revealInvitation() {
+    document.getElementById("countdown-container").style.display = "none";
+    document.getElementById("invitation-content").style.display = "block";
+    playFireworks();
+}
+
+// Function to Play Fireworks Animation
+function playFireworks() {
+    let audio = new Audio('firework_sound.mp3');
+    audio.play();
+
+    let firework = document.createElement("div");
+    firework.innerHTML = "🎆🎇💥";
+    firework.style.position = "absolute";
+    firework.style.left = Math.random() * window.innerWidth + "px";
+    firework.style.top = Math.random() * window.innerHeight + "px";
+    firework.style.fontSize = "3em";
+    firework.style.animation = "fadeOut 1.5s forwards";
+
+    document.body.appendChild(firework);
+
+    setTimeout(() => {
+        firework.remove();
+    }, 1500);
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
 
 // RSVP Form Submission Alert
 document.querySelector("form").addEventListener("submit", function (event) {
