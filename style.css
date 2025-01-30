@@ -13,11 +13,22 @@ header {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
-p {
-    font-size: 1.2em;
+#gift-box {
+    font-size: 4em;
+    cursor: pointer;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+#countdown-container {
+    margin-top: 20px;
 }
 
 section {
@@ -26,34 +37,12 @@ section {
     background: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    font-size: 1.1em;
-    margin: 10px 0;
-}
-
-form input, form button {
-    padding: 10px;
-    margin: 10px;
-    width: 80%;
-    max-width: 300px;
-}
-
-button {
-    background: #ff69b4;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #e05291;
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
 }
 
 .gallery {
@@ -72,4 +61,4 @@ footer {
     background: #ff69b4;
     color: white;
     padding: 10px;
-}
+    }
