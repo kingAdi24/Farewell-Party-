@@ -1,59 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farewell Invitation</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<html>
+    <head>
 
-    <header>
-        <h1>🎁 Tap the Gift to Reveal!</h1>
-        <div id="gift-box" onclick="revealAll()">🎁</div>
-        <div id="countdown-container" style="display:none;">
-            <h2>🎉 Farewell Countdown 🎉</h2>
-            <div id="countdown"></div>
-        </div>
-    </header>
+        <title>Invitation</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" media="screen and (max-width: 1100px)" href="css/widescreen.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/card.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js"></script>
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
+        <link rel="manifest" href="/site.webmanifest">
 
-    <section id="invitation-content" style="display:none;">
-        <h2>📅 Event Details</h2>
-        <p><strong>Date:</strong> 8th February 2025</p>
-        <p><strong>Time:</strong> 9:00 AM</p>
-        <p><strong>Venue:</strong> Shri Ram Public School, Bawara, Ghazipur</p>
+    </head>
+    <body>
 
-        <h2>🎤 Invitation</h2>
-        <p>We invite all students and teachers to be a part of this special farewell gathering. Let's make it memorable!</p>
+        <aside class="profile-card">
+            <header>
+              <!-- here’s the avatar -->
+              <a target="_blank" href="#">
+                <img src="http://lorempixel.com/150/150/people/" class="hoverZoomLink">
+              </a>
 
-        <h2>📜 Event Schedule</h2>
-        <ul>
-            <li>9:00 AM - Welcome Speech</li>
-            <li>9:30 AM - Fun Games & Performances</li>
-            <li>11:00 AM - Senior Messages</li>
-            <li>12:00 PM - Cake Cutting & Lunch</li>
-            <li>1:30 PM - DJ & Celebration</li>
-        </ul>
+              <!-- the username -->
+              <h1>
+                      Invitation
+                    </h1>
 
-        <h2>✍️ Confirm Your Presence</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <button type="submit">RSVP Now</button>
-        </form>
+              <!-- and role or location -->
+              <h2>
+                      Farewell Party
+                    </h2>
 
-        <h2>📸 Memories & Gallery</h2>
-        <div class="gallery">
-            <img src="memory1.jpg" alt="Farewell Image 1">
-            <img src="memory2.jpg" alt="Farewell Image 2">
-            <img src="memory3.jpg" alt="Farewell Image 3">
-        </div>
-    </section>
+            </header>
 
-    <footer>
-        <p>Contact: 9876543210 | Email: farewell@school.com</p>
-    </footer>
+            <!-- bit of a bio; who are you? -->
+            <div class="profile-bio">
 
-    <script src="script.js"></script>
-</body>
-    </html>
+              <p><b>Dear All,</b></p>
+            <p>
+            <i>    
+                At last time has come to say farewell. But don’t forget that there was a junior who always remembers the special moments shared with you.
+            </i>  
+            </p>
+
+            </div>
+
+            <!-- some social links to show off -->
+            <ul class="profile-social-links">
+              <li>
+                <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//sanjeev-kumar78.github.io/Farewell-Invitation/">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://api.whatsapp.com/send?text=https%3A%2F%2Fsanjeev-kumar78.github.io%2FFarewell-Invitation%2F">
+                  <i class="fa fa-whatsapp"></i>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="#">
+                  <i class="fa fa-github"></i>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="#">
+
+                  <i class="fa fa-telegram"></i>
+                </a>
+              </li>
+            </ul>
+          </aside>
+    </body>
