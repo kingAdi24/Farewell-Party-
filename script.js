@@ -1,7 +1,8 @@
-// Function to Reveal Countdown
-function revealCountdown() {
+// Function to Reveal Countdown and All Content
+function revealAll() {
     document.getElementById("gift-box").style.display = "none";
     document.getElementById("countdown-container").style.display = "block";
+    document.getElementById("invitation-content").style.display = "block";  // Show the invitation content immediately
     startCountdown();
     playFireworks();
 }
@@ -26,13 +27,6 @@ function startCountdown() {
             document.getElementById("countdown").innerHTML = "Farewell Party Started!";
         }
     }, 1000);
-}
-
-// Function to Reveal Invitation Details
-function revealInvitation() {
-    document.getElementById("countdown-container").style.display = "none";
-    document.getElementById("invitation-content").style.display = "block";
-    playFireworks();
 }
 
 // Function to Play Fireworks Animation
