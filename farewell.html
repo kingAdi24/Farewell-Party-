@@ -1,0 +1,193 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Farewell Invitation</title>
+  <!-- Animate.css for animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" />
+  <style>
+    /* Basic Reset and Styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+      background: linear-gradient(135deg, #74ABE2, #5563DE);
+      position: relative;
+    }
+    /* Particles.js Background */
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    /* Invitation Container */
+    .invitation-container {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 40px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.45);
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+      color: #fff;
+    }
+    .invitation-container h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px #ff5e62, 0 0 20px #ff5e62, 0 0 30px #ff5e62;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff5e62, 0 0 20px #ff5e62, 0 0 30px #ff5e62; }
+      to { text-shadow: 0 0 20px #ff5e62, 0 0 30px #ff5e62, 0 0 40px #ff5e62; }
+    }
+    .invitation-container p, .invitation-container .details p {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+    /* Countdown Timer */
+    #countdown {
+      font-size: 1.5rem;
+      margin: 20px 0;
+      font-weight: bold;
+    }
+    footer {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-shadow: 0 0 10px #ff0, 0 0 20px #ff0, 0 0 30px #ff0;
+      animation: glowTitle 2s infinite alternate;
+    }
+    #footer {
+      position: fixed;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.8);
+      color: #FFD700;
+      padding: 12px 25px;
+      border-radius: 15px;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 0 15px rgba(63, 246, 35, 0.5);
+      animation: fadeIn 2s ease-in-out, floatUpDown 3s infinite alternate;
+    }
+
+    @keyframes floatUpDown {
+      from { transform: translateX(-50%) translateY(0); }
+      to { transform: translateX(-50%) translateY(-5px); }
+    }
+    button {
+      background: linear-gradient(135deg, #ff9a00, #0c0c0c);
+      color: white;
+      font-weight: bold;
+      border: none;
+      align-self: center;
+      vertical-align: middle;
+      padding: 12px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 0 10px rgba(15, 14, 14, 0.8);
+    }
+
+  </style>
+</head>
+<body>
+    <footer id="footer">
+        Made by - <span class="glow-text">King Adi [Aditya] 👑</span>
+      </footer>    
+ <!-- Background Music -->
+ <audio autoplay loop>
+    <source src="aishta-aishta.mp3" type="audio/mp3">
+    Your browser does not support the audio tag.
+  </audio>
+
+  <!-- Particles.js Background -->
+  <div id="particles-js"></div>
+
+  <!-- Invitation Content -->
+  <div class="invitation-container animate__animated animate__fadeIn">
+    <h1 class="animate__animated animate__fadeInDown">Farewell Celebration</h1>
+    <p class="animate__animated animate__fadeInUp">
+      Join us as we bid farewell to an unforgettable journey!
+    </p>
+    <div class="details">
+      <p>Date: <strong>February 8, 2025</strong></p>
+      <p>Time: <strong>9:00 AM</strong></p>
+      <p>Venue: <strong>School Auditorium</strong></p>
+    </div>
+    <!-- Countdown Timer -->
+    <div id="countdown"></div>
+  </div>
+
+  <!-- Particles.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    // Configure Particles.js for a dynamic background
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" } },
+        "opacity": { "value": 0.5, "random": false },
+        "size": { "value": 3, "random": true },
+        "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 },
+        "move": { "enable": true, "speed": 6, "direction": "none", "random": false, "straight": false, "out_mode": "out" }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true }
+      },
+      "retina_detect": true
+    });
+
+    // Countdown Timer Script
+    const countdownEl = document.getElementById("countdown");
+    const targetDate = new Date("February 8, 2025 09:00:00").getTime();
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+      if(distance < 0) {
+        countdownEl.innerHTML = "The farewell event has started!";
+        clearInterval(countdownInterval);
+        return;
+      }
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      countdownEl.innerHTML = `Countdown: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+    const countdownInterval = setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // Automatically redirect to the RSVP & Images page after 3 seconds
+    setTimeout(function() {
+      window.location.href = "farewell2.html";
+    }, 10000);
+    function goToNextPage() {
+      window.location.href = "farewell2.html"; // Change this to your next page URL
+    }
+    </script>
+  </script>
+ <div class="btn-container">
+    
+    <button onclick="goToNextPage()">➡️ Next page</button>
+  </div> 
+</body>
+</html>
